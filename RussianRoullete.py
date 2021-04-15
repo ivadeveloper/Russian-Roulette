@@ -46,8 +46,8 @@ for i in range(0,7) :
     draw_circle(21, 'white')
 
 
-players_number = int(input('Number of players: '))
-alive  = [str(input()) for z in range(players_number)]
+players_number = int(turtle.numinput('Количество игрков:', '', 5))
+alive = turtle.textinput('Имена игроков: ', 'через пробел').split()
 
 print(alive)
 
@@ -76,9 +76,9 @@ while answer != 'no' :
             w = 0
         else:
             w +=1
-        if start  == 0 :
+        if start == 0 :
             t1 = turtle.Turtle()
-            t1.setpos(-170,250)
+            t1.setpos(-170, 250)
             t1.write(f'Удача отвернулась от {alive[w]}!', font=('Avenir', 28, 'bold'))
             time.sleep(1)
             dead.append(alive[w])
@@ -88,7 +88,7 @@ while answer != 'no' :
             t1.clear()
             if players_number == 1:  
                 t4 = turtle.Turtle()
-                t4.setpos(-170,250)
+                t4.setpos(-170, 250)
                 t4.write('CONGRATULATIONS', font=('Avenir', 28, 'bold'))
                 break
             
